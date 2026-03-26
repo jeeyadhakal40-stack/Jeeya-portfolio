@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jeeya Dhakal </title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --primary: #60a5fa;
+      --text: #e2e8f0;
+      --text-dim: #94a3b8;
+      --border: #334155;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Nav */
+    nav {
+      padding: 25px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+    }
+
+    nav a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    /* Hero */
+    header {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      padding: 60px 0;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 3.4rem;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-dim);
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: #0f172a;
+      padding: 12px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(96, 165, 250, 0.25);
+    }
+
+    .profile {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .profile img {
+      width: 100%;
+      display: block;
+    }
+
+    /* Sections */
+    section {
+      padding: 100px 0;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 60px;
+      height: 4px;
+      background: var(--primary);
+    }
+
+    .card {
+      background: var(--card);
+      padding: 28px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      transition: 0.3s;
+      margin-bottom: 24px;
+    }
+
+    .card:hover {
+      border-color: var(--primary);
+      transform: translateY(-6px);
+    }
+
+    .date {
+      color: var(--text-dim);
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      background: #0f172a;
+      border: 1px solid #334155;
+      color: white;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--primary);
+      outline: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 0;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.6rem;
+      }
+
+      nav ul {
+        display: none;   /* ← you can add hamburger menu later if you want */
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo"><span>J</span>eeya</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header>
+    <div class="hero">
+      <div>
+        <h1>Hi, I'm <span>Jeeya Dhakal</span></h1>
+        <p>BCA student passionate about web development. I build clean, responsive and user-friendly websites using HTML, CSS, JavaScript and modern design tools like Figma.</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+      <div class="profile">
+        <img src="images/jiyaa.jpeg" alt="Jee ya Dhakal">
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I'm currently pursuing BCA and deeply interested in frontend web development. I enjoy turning ideas into interactive, beautiful websites and continuously learning new technologies.</p>
+      <p>Skilled in HTML • CSS • JavaScript • Figma • UI/UX basics</p>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" style="background:#0b1120;">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="grid-2">
+
+        <div class="card">
+          <span class="date">2025 – Present</span>
+          <h3 style="color:var(--primary);">Frontend Intern</h3>
+          <p>XYZ Trader</p>
+          <p style="color:var(--text-dim); margin-top:12px;">
+            Working on real frontend projects using HTML, CSS and JavaScript.
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="date">2023 – 2025</span>
+          <h3 style="color:var(--primary);">Graphics Designer</h3>
+          <p>IT Club – HSMS</p>
+          <p style="color:var(--text-dim); margin-top:12px;">
+            Created social media graphics and helped improve online presence.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid-2">
+
+      <div class="card">
+        <h3 style="color:var(--primary);">Student Management System</h3>
+        <span class="date">2024</span>
+        <p style="color:var(--text-dim);">
+          Web-based student information system built with HTML, CSS and JavaScript.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 style="color:var(--primary);">GroceryHall – UI Prototype</h3>
+        <span class="date">2024</span>
+        <p style="color:var(--text-dim);">
+          Modern online grocery shopping app prototype designed in Figma.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" style="background:#0b1120;">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+
+        <div class="card">
+          <p style="margin-bottom:24px;">Feel free to reach out for internships, freelance work, or just to say hi!</p>
+          <p>📍 Hetauda, Nepal</p>
+          <p>📧 jeeyadhakal40@gmail.com</p>
+          <p>📞 +977 9812294988</p>
+        </div>
+
+        <div class="card">
+          <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn" style="width:100%;">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Jeeya Dhakal • Made with passion in Nepal</p>
+  </footer>
+
+</div>
+
+<script>
+  // Very basic form feedback (you can connect real backend later)
+  document.querySelector('form').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert("Thank you! I'll get back to you soon.");
+  });
+</script>
+
+</body>
+</html>
